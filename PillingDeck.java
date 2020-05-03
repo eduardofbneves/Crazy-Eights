@@ -12,16 +12,18 @@ public class PillingDeck extends CardGroup{
     System.out.print(test);
   }
 
-  public PillingDeck(String label){
+  public pillingDeck(String label){
     super(label);
     Deck pillingfulldeck = new Deck();
     cardslist = pillingfulldeck.toList();
   }
 
-  public void DrawCard(PillingDeck piledeck, CardGroup hand){
-    Card topcard = piledeck.removeCard(piledeck.cardGroupSize());
-    hand.addCard(topcard);
+  public void drawCard(int times, PillingDeck piledeck, CardGroup hand){
+    for (int i = 0; i < times; i++){
+      Card topcard = piledeck.removeCard(piledeck.cardGroupSize());
+      hand.addCard(topcard);
     }
+  }
 
   public Card getTopCard(){
     return cardslist.get(cardslist.size() - 1);
