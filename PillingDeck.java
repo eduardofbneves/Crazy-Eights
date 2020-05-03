@@ -18,6 +18,15 @@ public class PillingDeck extends CardGroup{
     cardslist = pillingfulldeck.toList();
   }
 
+  public void DrawCard(PillingDeck piledeck, CardGroup hand){
+    Card topcard = piledeck.removeCard(piledeck.cardGroupSize());
+    hand.addCard(topcard);
+    }
+
+  public Card getTopCard(){
+    return cardslist.get(cardslist.size() - 1);
+  }
+
   public boolean emptyPileDeck(){
     return cardslist.isEmpty();
   }

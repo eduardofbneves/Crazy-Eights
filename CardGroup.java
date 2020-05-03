@@ -22,9 +22,11 @@ public class CardGroup{
     cardslist = new ArrayList<Card>();
   }
 
+  /*
   public ArrayList<Card> getCardsList(){
     return cardslist;
   }
+  */
 
   public void addCard(Card card){
     cardslist.add(card);
@@ -38,6 +40,10 @@ public class CardGroup{
     Card removedcard = cardslist.get(i); //ver e é necessário já que posso meter o método playCard
     cardslist.remove(i);
     return removedcard;
+  }
+
+  public int cardGroupSize(){
+    return cardslist.size() - 1;
   }
 
   public void shuffleList(){
