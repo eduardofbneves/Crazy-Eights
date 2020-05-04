@@ -9,11 +9,19 @@ public class Main{
   }
 
   //private static Card cardplayed;
-  private static ArrayList<Card> playdeck= new ArrayList<Card>();
+  private CardGroup one;
+  private CardGroup two;
+  private Scanner inp;
+  private static CardGroup playdeck= new CardGroup("Played Cards");
 
   public void startGame(int nmrplayers){
-    PillingDeck pillingdeck = new PillingDeck();
-
+    PillingDeck pillingdeck = new PillingDeck("Pilling Deck");
+    pillingdeck.shuffleList();
+    one = new Player("Player1");
+    two = new Player("Player2");
+    one.drawCard(5, pillingdeck);
+    two.drawCard(5, pillingdeck);
+    playdeck.addCard(playdeck.getTopCard());
   }
 
   //

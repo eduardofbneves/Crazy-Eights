@@ -42,6 +42,10 @@ public class CardGroup{
     return removedcard;
   }
 
+  public Card getTopCard(){
+    return cardslist.get(cardslist.size() - 1);
+  }
+
   public int cardGroupSize(){
     return cardslist.size() - 1;
   }
